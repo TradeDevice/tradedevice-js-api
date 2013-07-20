@@ -8,8 +8,12 @@ var country;
 var url = "tradedevice.com/api/";
 
 function TradeDevice(country) {
-	if(country === "US") country = "us";
-	if(country === "CA") country = "ca";
+	if(country === "US") {
+		country = "us";
+	}
+	if(country === "CA") {
+		country = "ca";
+	}
 	this.country = country;
 }
 
@@ -17,7 +21,7 @@ TradeDevice.prototype.getApiRoot = function()
 {
 	country = this.country;
 	root = country + this.url;
-	return root
+	return root;
 });
 
 TradeDevice.prototype.getData = function(query)
