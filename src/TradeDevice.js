@@ -36,3 +36,28 @@ TradeDevice.prototype.getData = function(query)
 	};
 	return data;
 });
+
+
+TradeDevice.prototype.getDevices = function(limit=0)
+{
+	query = "devices?limit="+limit;
+	data = this.getData(query);
+	return data;
+});
+
+TradeDevice.prototype.getQuestions = function(device)
+{
+	query = "questions?device="+device;
+	data = this.getData(query);
+	return data
+});
+
+TradeDevice.prototype.getAmount = function(device,questionarray)
+{
+	questions;
+	length = questionarray.length;
+	for (var i = 0; i < length; i++)
+	{
+		// Still need to do!
+	}
+});
